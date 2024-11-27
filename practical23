@@ -1,0 +1,43 @@
+Program: 23 Imagine you are working on a program that predicts how something grows over 
+time, like how much money you might save each month. The growth pattern 
+follows a rule similar to the Fibonacci series, where the amount saved each month 
+is the sum of the two previous months. To help calculate this, you need a program 
+that can generate the Fibonacci series. Take the number of series user want to see 
+through keyboard input. 
+Code: #include <stdio.h> 
+ 
+// Here This Function Used For Create Fibonacci Series. 
+void generateFibonacci(int n) { 
+    int a = 0, b = 1, next; 
+ 
+    //Here This Loop Stands For Print And Generate Series.  
+    for (int i = 1; i <= n; i++) { 
+        printf("%d ", a); // Print the first term. 
+        next = a + b;     // For calculate next term. 
+        a = b;            // Update value of 'a' to 'b'.  
+        b = next;         // Update 'b' to generate next term. 
+    } 
+    printf("\n"); //here this Printf used for a new line after the series. 
+} 
+ 
+int main() { 
+    int num; 
+    // taking input from user. 
+    printf("Enter the number of Fibonacci terms you want to see: "); 
+    scanf("%d", &num);  
+ 
+ 
+ 
+    // Here this conditional statement used for check that number is valid or not(positive 
+or not) 
+    if (num <= 0) { 
+        printf("Please enter a positive integer.\n"); 
+    } else { 
+        // Call the function after check that number is valid or not   
+        generateFibonacci(num); 
+    } 
+ 
+   printf("\n\n\n\n\n\n\n\n24ce032_TARANG");
+ 
+    return 0;  
+} 
